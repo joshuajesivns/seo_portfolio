@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua | Senior SEO & AI Strategy Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --success: #22c55e;
+            --border: #334155;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding-bottom: 80px;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        /* Hero Section */
+        header {
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 10px; }
+        .tagline { font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 30px; }
+
+        .social-links { display: flex; justify-content: center; gap: 20px; }
+        .social-links a { color: var(--text); font-size: 1.5rem; transition: color 0.2s; }
+        .social-links a:hover { color: var(--accent); }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .stat-value { font-size: 2.5rem; font-weight: 800; color: var(--success); display: block; }
+        .stat-label { color: var(--text-muted); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; }
+
+        /* Sections */
+        section { margin-bottom: 80px; }
+        h2 { font-size: 2rem; margin-bottom: 40px; display: flex; align-items: center; gap: 15px; }
+        h2::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+        /* Tool Cards */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .tool-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, border-color 0.2s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .tool-icon { font-size: 2rem; color: var(--accent); margin-bottom: 20px; display: block; }
+        .tool-card h3 { margin-bottom: 10px; font-size: 1.5rem; }
+        .tool-card p { color: var(--text-muted); margin-bottom: 20px; }
+        .tool-tag { font-size: 0.75rem; background: var(--bg); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--border); margin-right: 5px; }
+
+        /* Case Study / Results List */
+        .case-study {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+
+        .cs-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px; }
+        .cs-title { font-size: 1.5rem; font-weight: 700; }
+        .cs-metric { background: rgba(34, 197, 94, 0.1); color: var(--success); padding: 5px 15px; border-radius: 999px; font-weight: 700; font-size: 0.9rem; }
+        .cs-content { color: var(--text-muted); }
+        .cs-content b { color: var(--text); }
+
+        /* Footer */
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .tools-grid { grid-template-columns: 1fr; }
+            .cs-header { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="badge">Available for New Opportunities</span>
+        <h1>Hi, I'm Joshua</h1>
+        <p class="tagline">Senior SEO Specialist specializing in <b>Semantic Engineering</b>, <b>Technical SEO</b>, and <b>AI-Driven Search Strategies</b>. Since 2022, I've been helping brands navigate the shift from keywords to entities.</p>
+        <div class="social-links">
+            <a href="https://github.com/joshuajesivns" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </header>
+
+    <!-- Impact Stats -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <span class="stat-value">+145%</span>
+            <span class="stat-label">Avg. Organic Growth</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value">2.4M</span>
+            <span class="stat-label">Total Clicks Managed</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value">120+</span>
+            <span class="stat-label">GBP Optimized</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value">99%</span>
+            <span class="stat-label">Schema Coverage</span>
+        </div>
+    </div>
+
+    <!-- Proven Results Section -->
+    <section>
+        <h2><i class="fas fa-chart-line"></i> Proven Results</h2>
+        
+        <div class="case-study">
+            <div class="cs-header">
+                <div class="cs-title">Home Services (HVAC) Multi-Location Growth</div>
+                <div class="cs-metric">+180% Organic Impressions</div>
+            </div>
+            <p class="cs-content">
+                Implemented a full-scale <b>Technical SEO Audit</b> and <b>Semantic Schema Graph</b>. By connecting LocalBusiness entities to Service offerings through @id linking, we achieved a 210% increase in clicks within 6 months.
+                <br><br>
+                <b>Key Actions:</b> Technical Site Restructuring, Service Area Page Optimization, Google Business Profile management.
+            </p>
+        </div>
+
+        <div class="case-study">
+            <div class="cs-header">
+                <div class="cs-title">E-commerce Product Visibility Campaign</div>
+                <div class="cs-metric">Top 3 Rankings for 45+ Keywords</div>
+            </div>
+            <p class="cs-content">
+                Leveraged <b>AI-Driven Content Strategy</b> to identify topical gaps and create high-authority content hubs. Transitioned from traditional link building to <b>Topical Authority</b> building, resulting in a 40% reduction in customer acquisition cost (CAC).
+                <br><br>
+                <b>Key Actions:</b> Content Gap Analysis, AI-assisted visual content, Advanced Product Schema.
+            </p>
+        </div>
+    </section>
+
+    <!-- Tech Portfolio Section -->
+    <section>
+        <h2><i class="fas fa-code"></i> SEO Engineering Tools</h2>
+        <div class="tools-grid">
+            <a href="https://github.com/joshuajesivns/image-prompt-generator" class="tool-card" target="_blank">
+                <i class="fas fa-magic tool-icon"></i>
+                <h3>AI Image Prompt Gen</h3>
+                <p>A specialized tool for SEOs to generate high-conversion AI visuals with automated Alt Text and Filename injection.</p>
+                <div>
+                    <span class="tool-tag">JavaScript</span>
+                    <span class="tool-tag">SEO Workflow</span>
+                    <span class="tool-tag">AI Midjourney</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/joshuajesivns/schema-generator" class="tool-card" target="_blank">
+                <i class="fas fa-project-diagram tool-icon"></i>
+                <h3>JVNS Schema Generator</h3>
+                <p>Advanced JSON-LD generator that builds semantic entity graphs with @id linking for high-authority SEO deployments.</p>
+                <div>
+                    <span class="tool-tag">React</span>
+                    <span class="tool-tag">JSON-LD</span>
+                    <span class="tool-tag">Technical SEO</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section>
+        <h2><i class="fas fa-brain"></i> SEO Philosophy</h2>
+        <div style="background: var(--card-bg); padding: 40px; border-radius: 16px; border: 1px solid var(--border);">
+            <p style="color: var(--text-muted); margin-bottom: 20px;">
+                "SEO is no longer just about ranking for keywords; it's about becoming the most trusted entity in your niche. My approach combines <b>Technical Precision</b> (clean code/speed), <b>Semantic Authority</b> (Schema/Entities), and <b>AI-driven Content Strategy</b> to ensure brands are visible in both traditional SERPs and new AI Overviews (SGE)."
+            </p>
+            <p style="font-weight: 700; color: var(--accent);">Joshua | SEO & AI Specialist</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Joshua | Built with Technical SEO in mind.</p>
+    </footer>
+</div>
+
+</body>
+</html>
