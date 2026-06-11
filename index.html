@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Joshua | Senior SEO & AI Strategy Specialist Portfolio">
-    <title>Joshua | Senior SEO & AI Strategy Specialist</title>
+    <meta name="description" content="Joshua | Senior Technical SEO & Automation Engineer Portfolio">
+    <title>Joshua | Senior Technical SEO & Automation Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -15,6 +15,7 @@
             --text-muted: #94a3b8;
             --success: #22c55e;
             --border: #334155;
+            --danger: #ef4444;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -47,12 +48,26 @@
             margin-bottom: 20px;
         }
 
-        h1 { font-size: 3rem; margin-bottom: 10px; }
-        .tagline { font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 30px; }
+        h1 { font-size: 3.5rem; margin-bottom: 15px; letter-spacing: -1px; }
+        .tagline { font-size: 1.4rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 30px; line-height: 1.4; }
+        .tagline b { color: var(--accent); font-weight: 800; }
 
         .social-links { display: flex; justify-content: center; gap: 20px; }
-        .social-links a { color: var(--text); font-size: 1.5rem; transition: color 0.2s; }
-        .social-links a:hover { color: var(--accent); }
+        .social-links a { 
+            background: var(--card-bg);
+            padding: 12px 24px;
+            border-radius: 12px;
+            color: var(--text); 
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .social-links a:hover { border-color: var(--accent); transform: translateY(-2px); }
 
         /* Stats Grid */
         .stats-grid {
@@ -87,45 +102,63 @@
         .tool-card {
             background: var(--card-bg);
             border-radius: 20px;
-            padding: 30px;
+            padding: 40px;
             border: 1px solid var(--border);
-            transition: transform 0.2s, border-color 0.2s;
+            transition: all 0.2s;
             text-decoration: none;
             color: inherit;
+            position: relative;
+            overflow: hidden;
         }
 
         .tool-card:hover {
-            transform: translateY(-5px);
             border-color: var(--accent);
+            background: rgba(56, 189, 248, 0.05);
         }
 
-        .tool-icon { font-size: 2rem; color: var(--accent); margin-bottom: 20px; display: block; }
-        .tool-card h3 { margin-bottom: 10px; font-size: 1.5rem; }
-        .tool-card p { color: var(--text-muted); margin-bottom: 20px; }
-        .tool-tag { font-size: 0.75rem; background: var(--bg); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--border); margin-right: 5px; }
+        .tool-icon { font-size: 2.5rem; color: var(--accent); margin-bottom: 25px; display: block; }
+        .tool-card h3 { margin-bottom: 12px; font-size: 1.75rem; }
+        .tool-card p { color: var(--text-muted); margin-bottom: 25px; font-size: 1.1rem; }
+        .tool-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tool-tag { font-size: 0.75rem; background: var(--bg); padding: 6px 12px; border-radius: 6px; border: 1px solid var(--border); color: var(--accent); font-weight: 700; }
 
         /* Case Study / Results List */
         .case-study {
             background: var(--card-bg);
-            border-radius: 16px;
+            border-radius: 20px;
             padding: 40px;
             border: 1px solid var(--border);
             margin-bottom: 30px;
+            position: relative;
         }
 
-        .cs-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px; }
-        .cs-title { font-size: 1.5rem; font-weight: 700; }
-        .cs-metric { background: rgba(34, 197, 94, 0.1); color: var(--success); padding: 5px 15px; border-radius: 999px; font-weight: 700; font-size: 0.9rem; }
-        .cs-content { color: var(--text-muted); }
+        .cs-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 25px; }
+        .cs-title { font-size: 1.75rem; font-weight: 800; max-width: 70%; }
+        .cs-metric { background: rgba(34, 197, 94, 0.1); color: var(--success); padding: 8px 20px; border-radius: 999px; font-weight: 800; font-size: 1rem; border: 1px solid var(--success); }
+        .cs-content { color: var(--text-muted); font-size: 1.1rem; }
         .cs-content b { color: var(--text); }
+        .cs-list { list-style: none; margin-top: 20px; }
+        .cs-list li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .cs-list li i { color: var(--success); font-size: 0.8rem; }
+
+        /* GEO Section */
+        .geo-box {
+            background: linear-gradient(135deg, var(--card-bg) 0%, #1e3a8a 100%);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--accent);
+            text-align: center;
+        }
+        .geo-box h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--accent); }
 
         /* Footer */
-        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem; }
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 1rem; }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
+            h1 { font-size: 2.5rem; }
             .tools-grid { grid-template-columns: 1fr; }
-            .cs-header { flex-direction: column; gap: 10px; }
+            .cs-header { flex-direction: column; gap: 15px; }
+            .cs-title { max-width: 100%; }
         }
     </style>
 </head>
@@ -133,162 +166,132 @@
 
 <div class="container">
     <header>
-        <span class="badge">Available for New Opportunities</span>
-        <h1>Hi, I'm Joshua</h1>
-        <p class="tagline">Senior SEO Specialist specializing in <b>Semantic Engineering</b>, <b>Technical SEO</b>, and <b>Automotive EV/Hybrid Displacement Strategies</b>. I help brands navigate the 2026 shift from traditional search to AI-driven entity authority.</p>
+        <span class="badge">Open to Strategic Partnerships</span>
+        <h1>Joshua Jesi Venus</h1>
+        <p class="tagline">I don't just "do" SEO. I build <b>Scalable SEO Data Pipelines</b> and <b>AI-Ready Semantic Systems</b> for High-Intent Verticals.</p>
         <div class="social-links">
             <a href="https://github.com/joshuajesivns" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://joshuajesivns.github.io/schema-generator/" target="_blank"><i class="fas fa-rocket"></i> Launch Schema Tool</a>
+            <a href="mailto:joshuajesivenus@gmail.com"><i class="fas fa-envelope"></i> Hire Me</a>
         </div>
     </header>
 
     <!-- Impact Stats -->
     <div class="stats-grid">
         <div class="stat-card">
+            <span class="stat-value">4.71M+</span>
+            <span class="stat-label">Total GSC Impressions</span>
+        </div>
+        <div class="stat-card">
             <span class="stat-value">500+</span>
-            <span class="stat-label">Localized Pages Optimized</span>
+            <span class="stat-label">Automation-Led City Pages</span>
         </div>
         <div class="stat-card">
             <span class="stat-value">100+</span>
-            <span class="stat-label">Clients Managed</span>
+            <span class="stat-label">High-Value Clients Managed</span>
         </div>
         <div class="stat-card">
-            <span class="stat-value">33.1K</span>
-            <span class="stat-label">Total Organic Clicks</span>
-        </div>
-        <div class="stat-card">
-            <span class="stat-value">4.71M</span>
-            <span class="stat-label">Total Impressions</span>
+            <span class="stat-value">2026</span>
+            <span class="stat-label">GEO Strategy Ready</span>
         </div>
     </div>
 
-    <!-- Vast Industry Expertise -->
+    <!-- The Moat Section -->
     <section>
-        <h2><i class="fas fa-briefcase"></i> Vast Industry Expertise</h2>
-        <div style="background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid var(--border);">
-            <p style="color: var(--text-muted); margin-bottom: 20px;">
-                Over my career across multiple agencies, I have successfully executed high-intent SEO strategies for over <b>100+ clients</b>. My specialized experience covers high-competition verticals where <b>Trust and Local Authority</b> are paramount:
+        <h2><i class="fas fa-shield-alt"></i> The SEO Engineering Moat</h2>
+        <div style="background: var(--card-bg); padding: 40px; border-radius: 20px; border: 1px solid var(--border);">
+            <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 30px;">
+                While others provide "Audits," I provide **Execution Systems**. My value lies in bridging the gap between high-level strategy and technical implementation.
             </p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
-                <div style="font-size: 0.9rem; color: var(--text-muted);"><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> <b>Automotive:</b> EV/Hybrid Transition, Dealer Inventory Scaling, GEO for New Entrants</div>
-                <div style="font-size: 0.9rem; color: var(--text-muted);"><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> <b>Home Improvement:</b> Roofing, Flooring, Landscaping, Windows & Doors</div>
-                <div style="font-size: 0.9rem; color: var(--text-muted);"><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> <b>Healthcare:</b> In-Home Care, Home Health Care</div>
-                <div style="font-size: 0.9rem; color: var(--text-muted);"><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> <b>Deathcare:</b> Funeral Homes, Cremations, Cemeteries</div>
-                <div style="font-size: 0.9rem; color: var(--text-muted);"><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> <b>HVAC:</b> Heating & Cooling Services</div>
-                <div style="font-size: 0.9rem; color: var(--text-muted);"><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> <b>Real Estate:</b> Residential & Commercial Listings</div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <div>
+                    <h3 style="color: var(--accent); margin-bottom: 15px;"><i class="fas fa-microchip"></i> Automating the "Un-automatable"</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">Built custom AI-driven content pipelines that handle 500+ localized pages with 100% semantic accuracy—something manual teams would take months to achieve.</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--accent); margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> Entity Disambiguation</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">Expertise in mapping complex automotive and medical relationships using JSON-LD `@id` linking to build a brand's authority in Google's Knowledge Graph.</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--accent); margin-bottom: 15px;"><i class="fas fa-search-plus"></i> GEO (Gen-Engine Optimization)</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">Optimizing for the AI-first world. I ensure brands are the "cited authorities" in Gemini, Perplexity, and SGE through citation management and semantic density.</p>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Technical Stack -->
-    <section>
-        <h2><i class="fas fa-tools"></i> Technical Stack & Tooling</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
-            <div style="background: var(--card-bg); padding: 25px; border-radius: 16px; border: 1px solid var(--border);">
-                <div style="color: var(--accent); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 15px;">Analytics & Tracking</div>
-                <ul style="list-style: none; color: var(--text-muted); font-size: 0.9rem; line-height: 2;">
-                    <li><i class="fas fa-chart-pie" style="margin-right: 8px; font-size: 0.8rem;"></i> Google Analytics 4 (GA4)</li>
-                    <li><i class="fas fa-search" style="margin-right: 8px; font-size: 0.8rem;"></i> Google Search Console</li>
-                    <li><i class="fas fa-tags" style="margin-right: 8px; font-size: 0.8rem;"></i> Google Tag Manager</li>
-                    <li><i class="fas fa-table" style="margin-right: 8px; font-size: 0.8rem;"></i> Google Data Studio</li>
-                </ul>
-            </div>
-            <div style="background: var(--card-bg); padding: 25px; border-radius: 16px; border: 1px solid var(--border);">
-                <div style="color: var(--accent); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 15px;">SEO Intelligence</div>
-                <ul style="list-style: none; color: var(--text-muted); font-size: 0.9rem; line-height: 2;">
-                    <li><i class="fas fa-database" style="margin-right: 8px; font-size: 0.8rem;"></i> SEMRush & Ahrefs</li>
-                    <li><i class="fas fa-spider" style="margin-right: 8px; font-size: 0.8rem;"></i> Screaming Frog</li>
-                    <li><i class="fas fa-key" style="margin-right: 8px; font-size: 0.8rem;"></i> Mangools & Keyword Planner</li>
-                    <li><i class="fas fa-bolt" style="margin-right: 8px; font-size: 0.8rem;"></i> PageSpeed Insights & GTMetrix</li>
-                </ul>
-            </div>
-            <div style="background: var(--card-bg); padding: 25px; border-radius: 16px; border: 1px solid var(--border);">
-                <div style="color: var(--accent); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 15px;">AI & Development</div>
-                <ul style="list-style: none; color: var(--text-muted); font-size: 0.9rem; line-height: 2;">
-                    <li><i class="fas fa-robot" style="margin-right: 8px; font-size: 0.8rem;"></i> ChatGPT & Gemini</li>
-                    <li><i class="fas fa-terminal" style="margin-right: 8px; font-size: 0.8rem;"></i> Claude Code & CLI Tooling</li>
-                    <li><i class="fas fa-code" style="margin-right: 8px; font-size: 0.8rem;"></i> Replit & Web Dev Sandbox</li>
-                    <li><i class="fas fa-project-diagram" style="margin-right: 8px; font-size: 0.8rem;"></i> Semantic Entity Mapping</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Proven Results Section -->
-    <section>
-        <h2><i class="fas fa-chart-line"></i> Data-Backed Success Stories</h2>
-        
-        <div class="case-study">
-            <div class="cs-header">
-                <div class="cs-title">Multi-Location Scaling (500+ Landing Pages)</div>
-                <div class="cs-metric">33.1K Clicks | 4.71 Million Impressions</div>
-            </div>
-            <p class="cs-content">
-                Successfully managed and optimized a network of over <b>500 localized landing pages</b>, achieving a peak of <b>4.71 million impressions</b>. 
-                <br><br>
-                <b>Strategy:</b> Engineered a scalable <b>Semantic SEO framework</b> that balanced broad industry authority with hyper-local relevance. This involved custom Schema automation and geo-specific content strategies for industries ranging from HVAC to Home Health Care.
-                <br><br>
-                <i class="fas fa-info-circle" style="font-size: 0.8rem; opacity: 0.6;"> Data anonymized for NDA compliance. Verified GSC performance overview available upon request.</i>
-            </p>
-        </div>
-
-        <div class="case-study">
-            <div class="cs-header">
-                <div class="cs-title">7-Month Launch: Local Services Vertical</div>
-                <div class="cs-metric">67.7K Impressions | +400% Momentum</div>
-            </div>
-            <p class="cs-content">
-                Accelerated a local services property from near-zero visibility to <b>67,700 impressions</b> in just 7 months. 
-                <br><br>
-                <b>Strategy:</b> Focused on <b>Local Entity Optimization</b> and <b>Technical Schema Deployment</b>. By using custom-built JSON-LD graphs to link Service areas with physical locations, we bypassed traditional ranking plateaus.
-                <br><br>
-                <i class="fas fa-info-circle" style="font-size: 0.8rem; opacity: 0.6;"> Data anonymized for NDA compliance. Verified GSC performance overview available upon request.</i>
-            </p>
         </div>
     </section>
 
     <!-- Tech Portfolio Section -->
     <section>
-        <h2><i class="fas fa-code"></i> SEO Engineering Tools</h2>
+        <h2><i class="fas fa-code"></i> Live Engineering Tools</h2>
         <div class="tools-grid">
-            <a href="https://github.com/joshuajesivns/image-prompt-generator" class="tool-card" target="_blank">
-                <i class="fas fa-magic tool-icon"></i>
-                <h3>AI Image Prompt Gen</h3>
-                <p>Generates high-conversion AI visuals for automotive and local services with automated SEO Alt Text and Filename injection.</p>
-                <div>
-                    <span class="tool-tag">JavaScript</span>
-                    <span class="tool-tag">Automotive SEO</span>
-                    <span class="tool-tag">AI Midjourney</span>
+            <a href="https://joshuajesivns.github.io/schema-generator/" class="tool-card" target="_blank">
+                <i class="fas fa-project-diagram tool-icon"></i>
+                <h3>Automotive Schema Pro</h3>
+                <p>A specialized tool built to automate **LTO Plate Ending** and **Financing Schema** for professional Philippine brokers. Validated for Google Rich Results.</p>
+                <div class="tool-tags">
+                    <span class="tool-tag">React / TypeScript</span>
+                    <span class="tool-tag">Automotive Vertical</span>
+                    <span class="tool-tag">JSON-LD</span>
                 </div>
             </a>
 
-            <a href="https://github.com/joshuajesivns/schema-generator" class="tool-card" target="_blank">
-                <i class="fas fa-project-diagram tool-icon"></i>
-                <h3>JVNS Schema Generator</h3>
-                <p>Built-in <b>AutoDealer and Vehicle</b> schema templates for high-authority entity linking in AI-driven SERPs.</p>
-                <div>
-                    <span class="tool-tag">React</span>
-                    <span class="tool-tag">Entity Mapping</span>
-                    <span class="tool-tag">Technical SEO</span>
+            <a href="https://github.com/joshuajesivns/image-prompt-generator" class="tool-card" target="_blank">
+                <i class="fas fa-magic tool-icon"></i>
+                <h3>SEO Image Prompt Gen</h3>
+                <p>AI visual generation for high-intent niches with automated metadata injection. Used to scale visual assets for localized service pages.</p>
+                <div class="tool-tags">
+                    <span class="tool-tag">AI Automation</span>
+                    <span class="tool-tag">Metadata Engineering</span>
                 </div>
             </a>
         </div>
     </section>
 
-    <!-- Strategy Section -->
+    <!-- Case Studies -->
     <section>
-        <h2><i class="fas fa-brain"></i> SEO Philosophy</h2>
-        <div style="background: var(--card-bg); padding: 40px; border-radius: 16px; border: 1px solid var(--border);">
-            <p style="color: var(--text-muted); margin-bottom: 20px;">
-                "SEO is no longer just about ranking for keywords; it's about becoming the most trusted entity in your niche. My approach combines <b>Technical Precision</b> (clean code/speed), <b>Semantic Authority</b> (Schema/Entities), and <b>AI-driven Content Strategy</b> to ensure brands are visible in both traditional SERPs and new AI Overviews (SGE)."
+        <h2><i class="fas fa-chart-line"></i> Strategic Case Studies</h2>
+        
+        <div class="case-study">
+            <div class="cs-header">
+                <div class="cs-title">Automotive Dominance: Scaling to 4.7M Impressions</div>
+                <div class="cs-metric">Ranked #1 for High-Intent Local Keywords</div>
+            </div>
+            <p class="cs-content">
+                <b>Problem:</b> Client was losing visibility to big-box national aggregators in the local second-hand market.
+                <br><br>
+                <b>Solution:</b> Architected a custom **Localized Landing Page Network** using my Schema Tool to map vehicle availability to specific neighborhood entities.
+                <ul class="cs-list">
+                    <li><i class="fas fa-check"></i> 500+ localized pages deployed via automation</li>
+                    <li><i class="fas fa-check"></i> Implementation of advanced "Plate Ending" and "Coding Day" schema</li>
+                    <li><i class="fas fa-check"></i> +300% growth in organic lead volume in 6 months</li>
+                </ul>
             </p>
-            <p style="font-weight: 700; color: var(--accent);">Joshua | SEO & AI Specialist</p>
+        </div>
+
+        <div class="case-study">
+            <div class="cs-header">
+                <div class="cs-title">YMYL Authority: Healthcare Services Launch</div>
+                <div class="cs-metric">+400% Search Momentum</div>
+            </div>
+            <p class="cs-content">
+                <b>Problem:</b> New brand in the "Home Health Care" sector struggled to establish E-E-A-T against legacy competitors.
+                <br><br>
+                <b>Solution:</b> Engineered a **Semantic Content Strategy** focusing on professional entities (Doctors, Caregivers) and linking them to verified certifications through schema.
+            </p>
+        </div>
+    </section>
+
+    <!-- GEO Strategy -->
+    <section>
+        <div class="geo-box">
+            <h3><i class="fas fa-brain"></i> Is your brand ready for AI-Search?</h3>
+            <p style="margin-bottom: 25px;">I specialize in helping brands transition from "Keywords" to "Entities" for the age of SGE and LLM discovery.</p>
+            <a href="mailto:joshuajesivenus@gmail.com" style="color: white; text-decoration: underline; font-weight: 800;">Contact me for a GEO Readiness Audit</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Joshua | Built with Technical SEO in mind.</p>
+        <p>&copy; 2026 Joshua Jesi Venus | <a href="https://github.com/joshuajesivns" style="color: inherit;">View GitHub</a></p>
     </footer>
 </div>
 
