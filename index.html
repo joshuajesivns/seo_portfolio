@@ -154,9 +154,47 @@
         /* Footer */
         footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 1rem; }
 
+        /* Plain-English hero line */
+        .tagline-plain {
+            font-size: 1.05rem; color: var(--text); max-width: 720px;
+            margin: 0 auto 30px; line-height: 1.5;
+            border-left: 3px solid var(--accent); padding-left: 16px; text-align: left;
+        }
+
+        /* Service Menu */
+        .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .service-card {
+            background: var(--card-bg); border: 1px solid var(--border);
+            border-radius: 16px; padding: 32px; position: relative;
+        }
+        .service-card.popular { border-color: var(--accent); background: rgba(56,189,248,0.05); }
+        .service-badge {
+            position: absolute; top: -12px; right: 20px; background: var(--accent);
+            color: var(--bg); font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
+            letter-spacing: 0.05em; padding: 4px 12px; border-radius: 999px;
+        }
+        .service-tier {
+            display: block; color: var(--accent); font-size: 0.8rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px;
+        }
+        .service-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
+        .service-card p { color: var(--text-muted); font-size: 1rem; }
+        .whitelabel-note { margin-top: 24px; text-align: center; color: var(--text-muted); font-size: 1rem; }
+        .whitelabel-note b { color: var(--text); }
+        .whitelabel-note i { color: var(--accent); }
+
+        /* CTA button */
+        .cta-btn {
+            display: inline-block; background: var(--accent); color: var(--bg);
+            padding: 14px 32px; border-radius: 12px; font-weight: 800; font-size: 1.05rem;
+            text-decoration: none; transition: transform 0.2s;
+        }
+        .cta-btn:hover { transform: translateY(-2px); }
+
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             .tools-grid { grid-template-columns: 1fr; }
+            .service-grid { grid-template-columns: 1fr; }
             .cs-header { flex-direction: column; gap: 15px; }
             .cs-title { max-width: 100%; }
         }
@@ -166,9 +204,10 @@
 
 <div class="container">
     <header>
-        <span class="badge">Open to Strategic Partnerships</span>
+        <span class="badge">Available for Part-Time & White-Label SEO</span>
         <h1>Joshua Jesi Venus</h1>
         <p class="tagline">I don't just "do" SEO. I build <b>Scalable SEO Data Pipelines</b> and <b>AI-Ready Semantic Systems</b> for High-Intent Verticals.</p>
+        <p class="tagline-plain"><b>In plain terms:</b> I get your business found on Google — and inside AI answers (Gemini, ChatGPT, Perplexity) — then build the systems that keep it ranking.</p>
         <div class="social-links">
             <a href="https://github.com/joshuajesivns" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://joshuajesivns.github.io/schema-generator/" target="_blank"><i class="fas fa-rocket"></i> Launch Schema Tool</a>
@@ -187,8 +226,8 @@
             <span class="stat-label">Automation-Led City Pages</span>
         </div>
         <div class="stat-card">
-            <span class="stat-value">100+</span>
-            <span class="stat-label">High-Value Clients Managed</span>
+            <span class="stat-value">80+</span>
+            <span class="stat-label">Client Accounts (Since 2021)</span>
         </div>
         <div class="stat-card">
             <span class="stat-value">2026</span>
@@ -220,6 +259,30 @@
         </div>
     </section>
 
+    <!-- Services -->
+    <section>
+        <h2><i class="fas fa-list-check"></i> How We Can Work Together</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <span class="service-tier">01 · One-Off</span>
+                <h3>SEO Audit & 90-Day Plan</h3>
+                <p>A full technical + on-page + content audit, delivered as a prioritized 90-day roadmap. Your low-risk entry point.</p>
+            </div>
+            <div class="service-card popular">
+                <span class="service-badge">Most Popular</span>
+                <span class="service-tier">02 · Ongoing</span>
+                <h3>Monthly SEO Retainer</h3>
+                <p>Execution, handled: on-page, content, schema, internal linking, and monthly GSC/GA4 reporting.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-tier">03 · Project</span>
+                <h3>Technical & AI-Search Sprint</h3>
+                <p>JSON-LD/entity SEO, Core Web Vitals, and GEO setup so you're cited in AI Overviews (Gemini, SGE, Perplexity).</p>
+            </div>
+        </div>
+        <p class="whitelabel-note"><i class="fas fa-handshake"></i> <b>Agencies:</b> I white-label — your brand, my execution. Overflow technical SEO &amp; content at scale.</p>
+    </section>
+
     <!-- Tech Portfolio Section -->
     <section>
         <h2><i class="fas fa-code"></i> Live Engineering Tools</h2>
@@ -235,7 +298,7 @@
                 </div>
             </a>
 
-            <a href="https://github.com/joshuajesivns/image-prompt-generator" class="tool-card" target="_blank">
+            <a href="https://joshuajesivns.github.io/image-prompt-generator/" class="tool-card" target="_blank">
                 <i class="fas fa-magic tool-icon"></i>
                 <h3>SEO Image Prompt Gen</h3>
                 <p>AI visual generation for high-intent niches with automated metadata injection. Used to scale visual assets for localized service pages.</p>
@@ -281,12 +344,23 @@
         </div>
     </section>
 
-    <!-- GEO Strategy -->
+    <!-- Testimonials — uncomment and replace with 1-2 REAL quotes (e.g. LinkedIn recommendations). Nothing fake ships until you fill these in.
+    <section>
+        <h2><i class="fas fa-quote-left"></i> What People Say</h2>
+        <div class="case-study">
+            <p class="cs-content" style="font-style: italic;">"REPLACE — a 2-sentence quote about a result you delivered."</p>
+            <p style="margin-top: 15px; font-weight: 700;">— Name, Role, Company</p>
+        </div>
+    </section>
+    -->
+
+    <!-- CTA -->
     <section>
         <div class="geo-box">
-            <h3><i class="fas fa-brain"></i> Is your brand ready for AI-Search?</h3>
-            <p style="margin-bottom: 25px;">I specialize in helping brands transition from "Keywords" to "Entities" for the age of SGE and LLM discovery.</p>
-            <a href="mailto:joshuajesivenus@gmail.com" style="color: white; text-decoration: underline; font-weight: 800;">Contact me for a GEO Readiness Audit</a>
+            <h3><i class="fas fa-brain"></i> Ready to rank on Google — and in AI search?</h3>
+            <p style="margin-bottom: 25px;">Currently available for <b style="color:#fff;">part-time &amp; white-label SEO</b> — limited slots. Book a 20-minute fit call and let's see if we're a match.</p>
+            <!-- TODO: swap this mailto for your Calendly link once set up (a calendar converts better than email). -->
+            <a href="mailto:joshuajesivenus@gmail.com?subject=SEO%20Fit%20Call" class="cta-btn"><i class="fas fa-calendar-check"></i> Book a Fit Call</a>
         </div>
     </section>
 
