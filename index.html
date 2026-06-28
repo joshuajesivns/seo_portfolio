@@ -141,6 +141,21 @@
         .cs-list li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
         .cs-list li i { color: var(--success); font-size: 0.8rem; }
 
+        /* Case-study growth chart */
+        .cs-chart { margin: 5px 0 30px; background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+        .cs-chart-head { display: flex; flex-wrap: wrap; gap: 28px; align-items: baseline; margin-bottom: 18px; }
+        .cs-chart-stat { display: flex; flex-direction: column; }
+        .cs-chart-stat .num { font-size: 2rem; font-weight: 800; line-height: 1; }
+        .cs-chart-stat .num.imp { color: #a78bfa; }
+        .cs-chart-stat .num.clk { color: var(--accent); }
+        .cs-chart-stat .lbl { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); font-weight: 700; margin-top: 7px; }
+        .cs-chart-trend { margin-left: auto; align-self: center; background: rgba(34,197,94,0.1); color: var(--success); border: 1px solid var(--success); padding: 7px 16px; border-radius: 999px; font-weight: 800; font-size: 0.85rem; white-space: nowrap; }
+        .cs-chart svg { width: 100%; height: auto; display: block; }
+        .cs-legend { display: flex; gap: 22px; justify-content: center; margin-top: 14px; font-size: 0.8rem; color: var(--text-muted); }
+        .cs-legend span { display: flex; align-items: center; gap: 8px; }
+        .cs-legend i { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
+        .cs-chart-cap { margin-top: 12px; font-size: 0.78rem; color: var(--text-muted); text-align: center; }
+
         /* GEO Section */
         .geo-box {
             background: linear-gradient(135deg, var(--card-bg) 0%, #1e3a8a 100%);
@@ -319,6 +334,64 @@
                 <div class="cs-title">Automotive Dominance: Scaling to 4.7M Impressions</div>
                 <div class="cs-metric">Ranked #1 for High-Intent Local Keywords</div>
             </div>
+
+            <!-- Real GSC results, rebuilt as on-brand data viz (16-month organic growth) -->
+            <figure class="cs-chart">
+                <div class="cs-chart-head">
+                    <div class="cs-chart-stat">
+                        <span class="num imp">4.71M</span>
+                        <span class="lbl">Total Impressions</span>
+                    </div>
+                    <div class="cs-chart-stat">
+                        <span class="num clk">33.1K</span>
+                        <span class="lbl">Total Clicks</span>
+                    </div>
+                    <span class="cs-chart-trend"><i class="fas fa-arrow-trend-up"></i> ~4× daily clicks in final stretch</span>
+                </div>
+
+                <svg viewBox="0 0 1000 380" role="img" aria-label="Google Search Console performance: impressions and clicks growing over 16 months, flat in early 2025 and accelerating sharply into 2026." preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <linearGradient id="impFill" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.38"/>
+                            <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- gridlines -->
+                    <g stroke="#334155" stroke-width="1" opacity="0.5">
+                        <line x1="70" y1="30" x2="960" y2="30"/>
+                        <line x1="70" y1="112.5" x2="960" y2="112.5"/>
+                        <line x1="70" y1="195" x2="960" y2="195"/>
+                        <line x1="70" y1="277.5" x2="960" y2="277.5"/>
+                        <line x1="70" y1="360" x2="960" y2="360"/>
+                    </g>
+
+                    <!-- impressions area + line -->
+                    <path d="M70,320.4 L125.6,313.8 L181.2,300.6 L236.8,287.4 L292.4,274.2 L348,261 L403.6,267.6 L459.2,277.5 L514.8,270.9 L570.4,261 L626,234.6 L681.6,195 L737.2,155.4 L792.8,112.5 L848.4,79.5 L904,56.4 L959.6,30 L959.6,360 L70,360 Z" fill="url(#impFill)"/>
+                    <path d="M70,320.4 L125.6,313.8 L181.2,300.6 L236.8,287.4 L292.4,274.2 L348,261 L403.6,267.6 L459.2,277.5 L514.8,270.9 L570.4,261 L626,234.6 L681.6,195 L737.2,155.4 L792.8,112.5 L848.4,79.5 L904,56.4 L959.6,30" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+                    <!-- clicks line -->
+                    <path d="M70,333.6 L125.6,330.3 L181.2,323.7 L236.8,313.8 L292.4,307.2 L348,297.3 L403.6,300.6 L459.2,307.2 L514.8,303.9 L570.4,297.3 L626,280.8 L681.6,257.7 L737.2,228 L792.8,198.3 L848.4,168.6 L904,142.2 L959.6,115.8" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+                    <!-- end dots -->
+                    <circle cx="959.6" cy="30" r="5" fill="#a78bfa"/>
+                    <circle cx="959.6" cy="115.8" r="5" fill="#38bdf8"/>
+
+                    <!-- x-axis labels -->
+                    <g fill="#94a3b8" font-size="20" font-family="Inter, sans-serif">
+                        <text x="70" y="378" text-anchor="start">Jan 2025</text>
+                        <text x="515" y="378" text-anchor="middle">Sep 2025</text>
+                        <text x="960" y="378" text-anchor="end">2026</text>
+                    </g>
+                </svg>
+
+                <div class="cs-legend">
+                    <span><i style="background:#a78bfa;"></i> Impressions</span>
+                    <span><i style="background:#38bdf8;"></i> Clicks</span>
+                </div>
+                <figcaption class="cs-chart-cap">Source: Google Search Console &middot; single client, 16-month organic growth</figcaption>
+            </figure>
+
             <p class="cs-content">
                 <b>Problem:</b> Client was losing visibility to big-box national aggregators in the local second-hand market.
                 <br><br>
@@ -327,6 +400,84 @@
                     <li><i class="fas fa-check"></i> 500+ localized pages deployed via automation</li>
                     <li><i class="fas fa-check"></i> Implementation of advanced "Plate Ending" and "Coding Day" schema</li>
                     <li><i class="fas fa-check"></i> +300% growth in organic lead volume in 6 months</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="case-study">
+            <div class="cs-header">
+                <div class="cs-title">Local HVAC: Multi-City Launch Across California</div>
+                <div class="cs-metric">1.7% Avg CTR &middot; Built for SERPs + AI Overviews</div>
+            </div>
+
+            <!-- Real GSC results, rebuilt as on-brand data viz (zero-to-traction launch) -->
+            <figure class="cs-chart">
+                <div class="cs-chart-head">
+                    <div class="cs-chart-stat">
+                        <span class="num imp">67.7K</span>
+                        <span class="lbl">Total Impressions</span>
+                    </div>
+                    <div class="cs-chart-stat">
+                        <span class="num clk">1.17K</span>
+                        <span class="lbl">Total Clicks</span>
+                    </div>
+                    <span class="cs-chart-trend"><i class="fas fa-arrow-trend-up"></i> Near-zero &rarr; ~25 clicks/day</span>
+                </div>
+
+                <svg viewBox="0 0 1000 380" role="img" aria-label="Google Search Console performance for an HVAC client: impressions and clicks climbing from near zero over the launch period, with a single high-CTR spike day." preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <linearGradient id="impFill2" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.38"/>
+                            <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- gridlines -->
+                    <g stroke="#334155" stroke-width="1" opacity="0.5">
+                        <line x1="70" y1="30" x2="960" y2="30"/>
+                        <line x1="70" y1="112.5" x2="960" y2="112.5"/>
+                        <line x1="70" y1="195" x2="960" y2="195"/>
+                        <line x1="70" y1="277.5" x2="960" y2="277.5"/>
+                        <line x1="70" y1="360" x2="960" y2="360"/>
+                    </g>
+
+                    <!-- impressions area + line -->
+                    <path d="M70,351.4 L119.4,347.1 L168.9,342.8 L218.3,338.5 L267.8,332.7 L317.2,325.6 L366.6,317 L416.1,308.3 L465.5,298.3 L515,288.3 L564.4,282.5 L613.9,273.9 L663.3,279.7 L712.7,271 L762.2,265.3 L811.6,273.9 L861.1,259.6 L910.5,266.7 L960,248.1 L960,360 L70,360 Z" fill="url(#impFill2)"/>
+                    <path d="M70,351.4 L119.4,347.1 L168.9,342.8 L218.3,338.5 L267.8,332.7 L317.2,325.6 L366.6,317 L416.1,308.3 L465.5,298.3 L515,288.3 L564.4,282.5 L613.9,273.9 L663.3,279.7 L712.7,271 L762.2,265.3 L811.6,273.9 L861.1,259.6 L910.5,266.7 L960,248.1" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+                    <!-- clicks line (note the single high-CTR spike day) -->
+                    <path d="M70,351.2 L119.4,346.8 L168.9,342.4 L218.3,338 L267.8,333.6 L317.2,324.8 L366.6,320.4 L416.1,311.6 L465.5,302.8 L515,294 L564.4,289.6 L613.9,280.8 L663.3,74 L712.7,272 L762.2,263.2 L811.6,276.4 L861.1,254.4 L910.5,267.6 L960,254.4" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+                    <!-- end dots -->
+                    <circle cx="960" cy="248.1" r="5" fill="#a78bfa"/>
+                    <circle cx="960" cy="254.4" r="5" fill="#38bdf8"/>
+
+                    <!-- x-axis labels -->
+                    <g fill="#94a3b8" font-size="20" font-family="Inter, sans-serif">
+                        <text x="70" y="378" text-anchor="start">Oct 2025</text>
+                        <text x="515" y="378" text-anchor="middle">Feb 2026</text>
+                        <text x="960" y="378" text-anchor="end">Jun 2026</text>
+                    </g>
+                </svg>
+
+                <div class="cs-legend">
+                    <span><i style="background:#a78bfa;"></i> Impressions</span>
+                    <span><i style="background:#38bdf8;"></i> Clicks</span>
+                </div>
+                <figcaption class="cs-chart-cap">Source: Google Search Console &middot; single HVAC client, organic growth from launch</figcaption>
+            </figure>
+
+            <p class="cs-content">
+                <b>Problem:</b> An HVAC contractor servicing multiple California cities had almost no organic visibility and was losing local-intent searches to established competitors across every service area.
+                <br><br>
+                <b>Solution:</b> A full-stack local SEO build &mdash; technical foundation, a consistent content engine, and AI-search readiness &mdash; engineered to win both classic SERPs and Google AI Overviews.
+                <ul class="cs-list">
+                    <li><i class="fas fa-check"></i> Optimized homepage + a steady content engine: 4 high-quality blogs every month</li>
+                    <li><i class="fas fa-check"></i> Custom per-city page schema + a fully detailed LocalBusiness schema for entity authority</li>
+                    <li><i class="fas fa-check"></i> Technical cleanup: page-speed fixes, robots.txt/sitemap unblocked for clean crawling, 404&rarr;live redirects, self-canonical on every page</li>
+                    <li><i class="fas fa-check"></i> Image SEO across the site &mdash; descriptive alt text and file names</li>
+                    <li><i class="fas fa-check"></i> City pages written LLM-friendly to rank in SERPs <b>and</b> earn citations in Google AI Overviews (AIO)</li>
+                    <li><i class="fas fa-check"></i> Result: 1.7% average CTR &mdash; well above the lifetime average on larger accounts</li>
                 </ul>
             </p>
         </div>
