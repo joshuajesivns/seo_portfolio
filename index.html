@@ -69,6 +69,17 @@
         }
         .social-links a:hover { border-color: var(--accent); transform: translateY(-2px); }
 
+        /* Footer contact row */
+        .contact-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 28px; }
+        .contact-row a {
+            background: var(--card-bg); padding: 12px 20px; border-radius: 12px;
+            color: var(--text); text-decoration: none; font-weight: 700; font-size: 0.9rem;
+            border: 1px solid var(--border); transition: all 0.2s;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .contact-row a:hover { border-color: var(--accent); transform: translateY(-2px); color: var(--text); }
+        .contact-row i { color: var(--accent); }
+
         /* Stats Grid */
         .stats-grid {
             display: grid;
@@ -252,7 +263,8 @@
         <p class="tagline">I help <b>small &amp; medium businesses</b> get found by the customers already searching for them — on <b>Google</b> and inside <b>AI answers</b> like ChatGPT, Gemini &amp; Perplexity.</p>
         <p class="tagline-plain"><b>What that means for you:</b> more of the right people finding your business, more enquiries, and rankings that keep working month after month. I handle the technical side — you run your business.</p>
         <div class="social-links">
-            <a href="https://github.com/joshuajesivns" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/joshuajesivenus12/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/joshuajesivns" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://joshuajesivns.github.io/schema-generator/" target="_blank"><i class="fas fa-rocket"></i> Launch Schema Tool</a>
             <a href="mailto:joshuajesivenus@gmail.com"><i class="fas fa-envelope"></i> Hire Me</a>
         </div>
@@ -663,7 +675,14 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Joshua Jesi Venus | <a href="https://github.com/joshuajesivns" style="color: inherit;">View GitHub</a></p>
+        <div class="contact-row">
+            <a href="https://www.linkedin.com/in/joshuajesivenus12/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.apexenginehq.com" target="_blank"><i class="fas fa-globe"></i> apexenginehq.com</a>
+            <a href="mailto:joshuajesivenus@gmail.com"><i class="fas fa-envelope"></i> joshuajesivenus@gmail.com</a>
+            <a href="tel:+639395623346"><i class="fas fa-phone"></i> +63 939 562 3346</a>
+            <a href="https://github.com/joshuajesivns" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <p>&copy; 2026 Joshua Jesi Venus &middot; Technical SEO &amp; Automation Engineer</p>
     </footer>
 </div>
 
