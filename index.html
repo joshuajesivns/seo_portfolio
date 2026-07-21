@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Joshua | Senior Technical SEO & Automation Engineer Portfolio">
-    <title>Joshua | Senior Technical SEO & Automation Engineer</title>
+    <meta name="description" content="Freelance technical SEO for small & medium businesses. I get you found on Google and inside AI answers (ChatGPT, Gemini, Perplexity) — 10.3M impressions, page-1 rankings, real results.">
+    <title>Joshua Jesi Venus — SEO That Gets Businesses Found on Google & AI Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -19,13 +22,16 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Inter', -apple-system, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             line-height: 1.6;
-            padding-bottom: 80px;
+            padding-bottom: 40px;
+            overflow-x: hidden;
         }
+        section[id] { scroll-margin-top: 28px; }
 
         .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
@@ -100,8 +106,10 @@
         .stat-label { color: var(--text-muted); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; }
 
         /* Sections */
-        section { margin-bottom: 80px; }
-        h2 { font-size: 2rem; margin-bottom: 40px; display: flex; align-items: center; gap: 15px; }
+        section { padding: 64px 0; margin-bottom: 0; }
+        .section-head { margin-bottom: 36px; }
+        .eyebrow { display: block; color: var(--accent); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 10px; }
+        h2 { font-size: 2rem; display: flex; align-items: center; gap: 15px; }
         h2::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
         /* Tool Cards */
@@ -188,10 +196,10 @@
 
         /* Hero portrait */
         .hero-photo {
-            width: 128px; height: 128px; border-radius: 50%;
+            width: 150px; height: 150px; border-radius: 50%;
             object-fit: cover; object-position: 50% 38%;
-            border: 3px solid var(--accent); display: block; margin: 0 auto 24px;
-            box-shadow: 0 8px 30px rgba(56, 189, 248, 0.25);
+            border: 3px solid var(--accent); display: block; margin: 0 auto 26px;
+            box-shadow: 0 10px 40px rgba(56, 189, 248, 0.3);
         }
 
         /* GEO Section */
@@ -244,12 +252,63 @@
         }
         .cta-btn:hover { transform: translateY(-2px); }
 
+        /* ---------- Polish pass ---------- */
+        /* Hero glow */
+        header { position: relative; }
+        header::before {
+            content: ''; position: absolute; top: -120px; left: 50%; transform: translateX(-50%);
+            width: 720px; height: 540px; max-width: 130vw;
+            background: radial-gradient(circle at center, rgba(56, 189, 248, 0.18), transparent 68%);
+            pointer-events: none; z-index: -1;
+        }
+
+        /* Hero call-to-action row */
+        .hero-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin: 4px 0 22px; }
+        .btn-ghost {
+            display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 12px;
+            font-weight: 800; font-size: 1.05rem; text-decoration: none; color: var(--text);
+            border: 1px solid var(--border); background: var(--card-bg); transition: all 0.2s;
+        }
+        .btn-ghost:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .cta-btn { display: inline-flex; align-items: center; gap: 10px; }
+        .hero-avail {
+            display: inline-flex; align-items: center; gap: 9px; font-size: 0.9rem; color: var(--text-muted);
+            background: var(--card-bg); border: 1px solid var(--border); border-radius: 999px;
+            padding: 8px 18px; margin-bottom: 28px;
+        }
+        .hero-avail b { color: var(--text); }
+        .hero-avail .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--success); box-shadow: 0 0 0 3px rgba(34,197,94,0.2); }
+
+        /* Alternating full-width section bands */
+        .band { position: relative; }
+        .band::before {
+            content: ''; position: absolute; inset: 0; left: 50%; transform: translateX(-50%);
+            width: 100vw; background: #0b1324;
+            border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); z-index: -1;
+        }
+
+        /* Stat card polish */
+        .stat-card { transition: all 0.2s; border-top: 2px solid transparent; }
+        .stat-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+        /* Why-me cards */
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .why-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 30px; transition: all 0.2s; }
+        .why-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+        .why-card .ic { width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: rgba(56,189,248,0.12); color: var(--accent); font-size: 1.35rem; margin-bottom: 18px; }
+        .why-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--text); }
+        .why-card p { color: var(--text-muted); font-size: 1rem; }
+
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
+            header { padding: 70px 0 40px; }
+            section { padding: 48px 0; }
             .tools-grid { grid-template-columns: 1fr; }
             .service-grid { grid-template-columns: 1fr; }
             .cs-header { flex-direction: column; gap: 15px; }
             .cs-title { max-width: 100%; }
+            .case-study { padding: 26px; }
+            .cs-chart { padding: 16px; }
         }
     </style>
 </head>
@@ -258,15 +317,19 @@
 <div class="container">
     <header>
         <img src="joshua.jpg" alt="Joshua Jesi Venus — Technical SEO & Automation Engineer" class="hero-photo" onerror="this.style.display='none'">
-        <span class="badge">Available for Part-Time & White-Label SEO</span>
+        <span class="badge">Freelance Technical SEO · Since 2021</span>
         <h1>Joshua Jesi Venus</h1>
         <p class="tagline">I help <b>small &amp; medium businesses</b> get found by the customers already searching for them — on <b>Google</b> and inside <b>AI answers</b> like ChatGPT, Gemini &amp; Perplexity.</p>
         <p class="tagline-plain"><b>What that means for you:</b> more of the right people finding your business, more enquiries, and rankings that keep working month after month. I handle the technical side — you run your business.</p>
+        <div class="hero-cta">
+            <a href="#contact" class="cta-btn"><i class="fas fa-calendar-check"></i> Book a Free Fit Call</a>
+            <a href="#work" class="btn-ghost"><i class="fas fa-chart-line"></i> See real results</a>
+        </div>
+        <div class="hero-avail"><span class="dot"></span> Available now for <b>part-time &amp; white-label SEO</b></div>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/joshuajesivenus12/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/joshuajesivns" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://joshuajesivns.github.io/schema-generator/" target="_blank"><i class="fas fa-rocket"></i> Launch Schema Tool</a>
-            <a href="mailto:joshuajesivenus@gmail.com"><i class="fas fa-envelope"></i> Hire Me</a>
         </div>
     </header>
 
@@ -285,38 +348,45 @@
             <span class="stat-label">Accounts Managed via Agency Partnerships</span>
         </div>
         <div class="stat-card">
-            <span class="stat-value">2026</span>
-            <span class="stat-label">GEO Strategy Ready</span>
+            <span class="stat-value">5+ Yrs</span>
+            <span class="stat-label">SEO Experience (Since 2021)</span>
         </div>
     </div>
 
-    <!-- The Moat Section -->
+    <!-- Why work with me -->
     <section>
-        <h2><i class="fas fa-shield-alt"></i> The SEO Engineering Moat</h2>
-        <div style="background: var(--card-bg); padding: 40px; border-radius: 20px; border: 1px solid var(--border);">
-            <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 30px;">
-                While others provide "Audits," I provide **Execution Systems**. My value lies in bridging the gap between high-level strategy and technical implementation.
-            </p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-                <div>
-                    <h3 style="color: var(--accent); margin-bottom: 15px;"><i class="fas fa-microchip"></i> Automating the "Un-automatable"</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-muted);">Built custom AI-driven content pipelines that handle 500+ localized pages with 100% semantic accuracy—something manual teams would take months to achieve.</p>
-                </div>
-                <div>
-                    <h3 style="color: var(--accent); margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> Entity Disambiguation</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-muted);">Expertise in mapping complex automotive and medical relationships using JSON-LD `@id` linking to build a brand's authority in Google's Knowledge Graph.</p>
-                </div>
-                <div>
-                    <h3 style="color: var(--accent); margin-bottom: 15px;"><i class="fas fa-search-plus"></i> GEO (Gen-Engine Optimization)</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-muted);">Optimizing for the AI-first world. I ensure brands are the "cited authorities" in Gemini, Perplexity, and SGE through citation management and semantic density.</p>
-                </div>
+        <div class="section-head">
+            <span class="eyebrow">Why work with me</span>
+            <h2><i class="fas fa-shield-halved"></i> More than an audit — I do the work</h2>
+        </div>
+        <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 760px; margin-bottom: 34px;">
+            Most SEOs hand you a PDF audit and leave the hard part to you. I actually implement the fixes — technical, on-page, content and schema — so the strategy turns into real rankings and enquiries.
+        </p>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="ic"><i class="fas fa-screwdriver-wrench"></i></div>
+                <h3>I build it, not just advise it</h3>
+                <p>Technical fixes, on-page, content and structured data — implemented and shipped, not handed back to you as a to-do list. You get results, not homework.</p>
+            </div>
+            <div class="why-card">
+                <div class="ic"><i class="fas fa-layer-group"></i></div>
+                <h3>Built to scale</h3>
+                <p>With smart automation I've launched 500+ location pages for a single client without quality slipping — work a manual team would take months to finish.</p>
+            </div>
+            <div class="why-card">
+                <div class="ic"><i class="fas fa-robot"></i></div>
+                <h3>Ready for AI search</h3>
+                <p>Your customers now ask ChatGPT, Gemini and Google's AI answers. I build your pages to be the source those tools cite — not just to rank in the blue links.</p>
             </div>
         </div>
     </section>
 
     <!-- Services -->
-    <section>
-        <h2><i class="fas fa-list-check"></i> How We Can Work Together</h2>
+    <section class="band">
+        <div class="section-head">
+            <span class="eyebrow">Ways to work together</span>
+            <h2><i class="fas fa-list-check"></i> Pick the level of help you need</h2>
+        </div>
         <div class="service-grid">
             <div class="service-card">
                 <span class="service-tier">01 · One-Off</span>
@@ -340,14 +410,17 @@
 
     <!-- Tech Portfolio Section -->
     <section>
-        <h2><i class="fas fa-code"></i> Live Engineering Tools</h2>
+        <div class="section-head">
+            <span class="eyebrow">Tools I've built</span>
+            <h2><i class="fas fa-code"></i> Live engineering tools</h2>
+        </div>
         <div class="tools-grid">
             <a href="https://joshuajesivns.github.io/schema-generator/" class="tool-card" target="_blank">
                 <img src="tool-schema.jpg" alt="Schema Markup Generator tool — form on the left generating live JSON-LD output on the right" class="tool-shot" loading="lazy">
                 <div class="tool-body">
                     <i class="fas fa-project-diagram tool-icon"></i>
                     <h3>Automotive Schema Pro</h3>
-                    <p>A specialized tool built to automate **LTO Plate Ending** and **Financing Schema** for professional Philippine brokers. Validated for Google Rich Results.</p>
+                    <p>A specialized tool that automates <b>LTO Plate Ending</b> and <b>financing schema</b> for professional Philippine brokers. Validated for Google Rich Results.</p>
                     <div class="tool-tags">
                         <span class="tool-tag">React / TypeScript</span>
                         <span class="tool-tag">Automotive Vertical</span>
@@ -386,8 +459,11 @@
     </section>
 
     <!-- Case Studies -->
-    <section>
-        <h2><i class="fas fa-chart-line"></i> Strategic Case Studies</h2>
+    <section class="band" id="work">
+        <div class="section-head">
+            <span class="eyebrow">Real results</span>
+            <h2><i class="fas fa-chart-line"></i> Case studies from live accounts</h2>
+        </div>
 
         <div class="case-study">
             <div class="cs-header">
@@ -553,7 +629,7 @@
             <p class="cs-content">
                 <b>Problem:</b> Client was losing visibility to big-box national aggregators in the local second-hand market.
                 <br><br>
-                <b>Solution:</b> Architected a custom **Localized Landing Page Network** using my Schema Tool to map vehicle availability to specific neighborhood entities.
+                <b>Solution:</b> Architected a custom <b>localized landing-page network</b> using my Schema Tool to map vehicle availability to specific neighborhood entities.
                 <ul class="cs-list">
                     <li><i class="fas fa-check"></i> 500+ localized pages deployed via automation</li>
                     <li><i class="fas fa-check"></i> Implementation of advanced "Plate Ending" and "Coding Day" schema</li>
@@ -648,7 +724,7 @@
             <p class="cs-content">
                 <b>Problem:</b> New brand in the "Home Health Care" sector struggled to establish E-E-A-T against legacy competitors.
                 <br><br>
-                <b>Solution:</b> Engineered a **Semantic Content Strategy** focusing on professional entities (Doctors, Caregivers) and linking them to verified certifications through schema.
+                <b>Solution:</b> Engineered a <b>semantic content strategy</b> focused on professional entities (doctors, caregivers) and linked them to verified certifications through schema.
             </p>
         </div>
     </section>
@@ -664,7 +740,7 @@
     -->
 
     <!-- CTA -->
-    <section>
+    <section id="contact">
         <div class="geo-box">
             <h3><i class="fas fa-brain"></i> Ready to rank on Google — and in AI search?</h3>
             <p style="margin-bottom: 15px;">Currently available for <b style="color:#fff;">part-time &amp; white-label SEO</b> — limited slots. Book a 20-minute fit call and let's see if we're a match.</p>
