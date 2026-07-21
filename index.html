@@ -155,6 +155,25 @@
         .cs-legend span { display: flex; align-items: center; gap: 8px; }
         .cs-legend i { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
         .cs-chart-cap { margin-top: 12px; font-size: 0.78rem; color: var(--text-muted); text-align: center; }
+        .cs-chart-stat .num.ctr, .cs-chart-stat .num.pos { color: var(--text); }
+
+        /* Year-over-year comparison bars */
+        .cs-yoy { margin: 6px 0 2px; }
+        .cs-yoy-row { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+        .cs-yoy-lbl { width: 74px; font-size: 0.8rem; font-weight: 700; color: var(--text-muted); flex-shrink: 0; }
+        .cs-yoy-track { flex: 1; height: 22px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+        .cs-yoy-fill { height: 100%; border-radius: 8px 0 0 8px; }
+        .cs-yoy-fill.now { background: linear-gradient(90deg, #38bdf8, #a78bfa); }
+        .cs-yoy-fill.base { background: #475569; }
+        .cs-yoy-val { width: 78px; text-align: right; font-weight: 800; font-size: 0.95rem; flex-shrink: 0; }
+
+        /* Hero portrait */
+        .hero-photo {
+            width: 128px; height: 128px; border-radius: 50%;
+            object-fit: cover; object-position: 50% 16%;
+            border: 3px solid var(--accent); display: block; margin: 0 auto 24px;
+            box-shadow: 0 8px 30px rgba(56, 189, 248, 0.25);
+        }
 
         /* GEO Section */
         .geo-box {
@@ -219,6 +238,7 @@
 
 <div class="container">
     <header>
+        <img src="joshua.jpg" alt="Joshua Jesi Venus — Technical SEO & Automation Engineer" class="hero-photo" onerror="this.style.display='none'">
         <span class="badge">Available for Part-Time & White-Label SEO</span>
         <h1>Joshua Jesi Venus</h1>
         <p class="tagline">I don't just "do" SEO. I build <b>Scalable SEO Data Pipelines</b> and <b>AI-Ready Semantic Systems</b> for High-Intent Verticals.</p>
@@ -233,7 +253,7 @@
     <!-- Impact Stats -->
     <div class="stats-grid">
         <div class="stat-card">
-            <span class="stat-value">4.71M+</span>
+            <span class="stat-value">15M+</span>
             <span class="stat-label">Total GSC Impressions</span>
         </div>
         <div class="stat-card">
@@ -328,7 +348,73 @@
     <!-- Case Studies -->
     <section>
         <h2><i class="fas fa-chart-line"></i> Strategic Case Studies</h2>
-        
+
+        <div class="case-study">
+            <div class="cs-header">
+                <div class="cs-title">Enterprise Organic Program: 10.3M Impressions &amp; 362K Clicks</div>
+                <div class="cs-metric">+22% YoY Organic Sessions</div>
+            </div>
+
+            <!-- Real GSC + GA4 results, anonymized (no client name or industry) -->
+            <figure class="cs-chart">
+                <div class="cs-chart-head">
+                    <div class="cs-chart-stat">
+                        <span class="num imp">10.3M</span>
+                        <span class="lbl">Total Impressions</span>
+                    </div>
+                    <div class="cs-chart-stat">
+                        <span class="num clk">362K</span>
+                        <span class="lbl">Total Clicks</span>
+                    </div>
+                    <div class="cs-chart-stat">
+                        <span class="num ctr">3.5%</span>
+                        <span class="lbl">Average CTR</span>
+                    </div>
+                    <div class="cs-chart-stat">
+                        <span class="num pos">13.1</span>
+                        <span class="lbl">Average Position</span>
+                    </div>
+                    <span class="cs-chart-trend"><i class="fas fa-arrow-trend-up"></i> +22% YoY organic sessions</span>
+                </div>
+
+                <!-- GA4 organic sessions, year-over-year (June 2025 vs June 2026) -->
+                <div class="cs-yoy">
+                    <div class="cs-yoy-row">
+                        <span class="cs-yoy-lbl">Jun 2025</span>
+                        <div class="cs-yoy-track"><div class="cs-yoy-fill base" style="width:82%"></div></div>
+                        <span class="cs-yoy-val">36,844</span>
+                    </div>
+                    <div class="cs-yoy-row">
+                        <span class="cs-yoy-lbl">Jun 2026</span>
+                        <div class="cs-yoy-track"><div class="cs-yoy-fill now" style="width:100%"></div></div>
+                        <span class="cs-yoy-val">45,034</span>
+                    </div>
+                </div>
+
+                <div class="cs-legend">
+                    <span><i style="background:#475569;"></i> Organic sessions, prior year</span>
+                    <span><i style="background:linear-gradient(90deg,#38bdf8,#a78bfa);"></i> Organic sessions, current year</span>
+                </div>
+                <figcaption class="cs-chart-cap">Source: Google Search Console (12-month clicks &amp; impressions) &amp; GA4 (organic sessions, year-over-year) &middot; client anonymized</figcaption>
+            </figure>
+
+            <p class="cs-content">
+                <b>The result:</b> A large, mature organic program &mdash; 10.3M impressions and 362K clicks over 12 months &mdash; where growth didn't come at the cost of quality. Organic sessions grew <b>+22% year over year</b> while engagement held steady at a <b>65.9% engaged-session rate</b> and <b>1m 11s</b> average engagement time.
+                <br><br>
+                <b>What I handled on this account:</b>
+                <!-- TODO: Joshua — confirm or swap these for your exact task list for this client. -->
+                <ul class="cs-list">
+                    <li><i class="fas fa-check"></i> Full technical SEO audits &amp; ongoing fixes &mdash; crawlability, indexation, Core Web Vitals &amp; site-speed</li>
+                    <li><i class="fas fa-check"></i> On-page optimization at scale &mdash; titles, meta descriptions, heading structure &amp; internal-linking architecture</li>
+                    <li><i class="fas fa-check"></i> Keyword &amp; content-gap research feeding a consistent publishing cadence</li>
+                    <li><i class="fas fa-check"></i> JSON-LD structured data / entity SEO for richer results &amp; Knowledge Graph authority</li>
+                    <li><i class="fas fa-check"></i> Image SEO across the site &mdash; descriptive alt text &amp; file naming</li>
+                    <li><i class="fas fa-check"></i> AI-search (GEO) readiness so pages earn citations in Google AI Overviews, Gemini &amp; Perplexity</li>
+                    <li><i class="fas fa-check"></i> Monthly GSC + GA4 reporting on impressions, clicks, CTR &amp; average position</li>
+                </ul>
+            </p>
+        </div>
+
         <div class="case-study">
             <div class="cs-header">
                 <div class="cs-title">Automotive Dominance: Scaling to 4.7M Impressions</div>
@@ -509,7 +595,8 @@
     <section>
         <div class="geo-box">
             <h3><i class="fas fa-brain"></i> Ready to rank on Google — and in AI search?</h3>
-            <p style="margin-bottom: 25px;">Currently available for <b style="color:#fff;">part-time &amp; white-label SEO</b> — limited slots. Book a 20-minute fit call and let's see if we're a match.</p>
+            <p style="margin-bottom: 15px;">Currently available for <b style="color:#fff;">part-time &amp; white-label SEO</b> — limited slots. Book a 20-minute fit call and let's see if we're a match.</p>
+            <p style="margin-bottom: 25px; color: var(--text-muted);"><i class="fas fa-clock"></i> Based in the <b style="color:#fff;">Philippines</b> &middot; available for calls <b style="color:#fff;">2:00 PM – 5:00 AM PHT</b> (overlaps US, EU &amp; APAC business hours).</p>
             <!-- TODO: swap this mailto for your Calendly link once set up (a calendar converts better than email). -->
             <a href="mailto:joshuajesivenus@gmail.com?subject=SEO%20Fit%20Call" class="cta-btn"><i class="fas fa-calendar-check"></i> Book a Fit Call</a>
         </div>
